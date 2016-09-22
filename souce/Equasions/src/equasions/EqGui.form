@@ -1131,7 +1131,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="PolynomeTasksInDocumentNumberSpinner" min="-2" pref="38" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="PolynimeDivisionTaskDocument" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PolynomeDivisionTaskDocument" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -1196,7 +1196,7 @@
                           <Component id="PolynomeTasksInDocumentNumberSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="PolynimeDivisionTaskDocument" min="-2" max="-2" attributes="0"/>
+                      <Component id="PolynomeDivisionTaskDocument" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="410" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1331,12 +1331,12 @@
             </Component>
             <Component class="javax.swing.JSpinner" name="PolynomeTasksInDocumentNumberSpinner">
             </Component>
-            <Component class="javax.swing.JButton" name="PolynimeDivisionTaskDocument">
+            <Component class="javax.swing.JButton" name="PolynomeDivisionTaskDocument">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442; &#x441; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f;&#x43c;&#x438; &#x43d;&#x430; &#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x43c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d;&#x43e;&#x432;"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PolynimeDivisionTaskDocumentMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PolynomeDivisionTaskDocumentMouseClicked"/>
               </Events>
             </Component>
             <Component class="javax.swing.JCheckBox" name="PolynomeTaskWithRemCheckbox">

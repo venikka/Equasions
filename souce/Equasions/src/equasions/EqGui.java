@@ -154,7 +154,7 @@ public class EqGui extends javax.swing.JFrame {
         divisorPolynomePowerSpinner = new javax.swing.JSpinner();
         PolynomeTasksInDocumentNumberLabel = new javax.swing.JLabel();
         PolynomeTasksInDocumentNumberSpinner = new javax.swing.JSpinner();
-        PolynimeDivisionTaskDocument = new javax.swing.JButton();
+        PolynomeDivisionTaskDocument = new javax.swing.JButton();
         PolynomeTaskWithRemCheckbox = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -871,10 +871,10 @@ public class EqGui extends javax.swing.JFrame {
 
         PolynomeTasksInDocumentNumberLabel.setText("Количество заданий в документе");
 
-        PolynimeDivisionTaskDocument.setText("Документ с заданиями на деление многочленов");
-        PolynimeDivisionTaskDocument.addMouseListener(new java.awt.event.MouseAdapter() {
+        PolynomeDivisionTaskDocument.setText("Документ с заданиями на деление многочленов");
+        PolynomeDivisionTaskDocument.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                PolynimeDivisionTaskDocumentMouseClicked(evt);
+                PolynomeDivisionTaskDocumentMouseClicked(evt);
             }
         });
 
@@ -937,7 +937,7 @@ public class EqGui extends javax.swing.JFrame {
                                 .addComponent(PolynomeTasksInDocumentNumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PolynomeTasksInDocumentNumberSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(PolynimeDivisionTaskDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(PolynomeDivisionTaskDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel11Layout.setVerticalGroup(
@@ -985,7 +985,7 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(PolynomeTasksInDocumentNumberLabel)
                     .addComponent(PolynomeTasksInDocumentNumberSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PolynimeDivisionTaskDocument)
+                .addComponent(PolynomeDivisionTaskDocument)
                 .addGap(410, 410, 410))
         );
 
@@ -1424,7 +1424,7 @@ public class EqGui extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_secondFactorTextFieldActionPerformed
 
-    private void PolynimeDivisionTaskDocumentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PolynimeDivisionTaskDocumentMouseClicked
+    private void PolynomeDivisionTaskDocumentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PolynomeDivisionTaskDocumentMouseClicked
         Polynome firstFactor;
         Polynome secondFactor;
         Polynome combination;
@@ -1457,7 +1457,7 @@ public class EqGui extends javax.swing.JFrame {
         } catch (IOException ex) {
             Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_PolynimeDivisionTaskDocumentMouseClicked
+    }//GEN-LAST:event_PolynomeDivisionTaskDocumentMouseClicked
    
     /**
      * @param args the command line arguments
@@ -1504,7 +1504,7 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JToggleButton NegativeStringGenegateButton;
     private javax.swing.JTextField NegativeTextField;
     private javax.swing.JButton PDFGenerateDenominatorButton;
-    private javax.swing.JButton PolynimeDivisionTaskDocument;
+    private javax.swing.JButton PolynomeDivisionTaskDocument;
     private javax.swing.JButton PolynomeGenerateRandomButton;
     private javax.swing.JCheckBox PolynomeRootsIncludingNill;
     private javax.swing.JLabel PolynomeRootsRange;
