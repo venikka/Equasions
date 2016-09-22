@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JTextField" name="memberVarPowerTextField">
+    </Component>
+    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+      <SubComponents>
+        <Menu class="javax.swing.JMenu" name="jMenu1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="File"/>
+          </Properties>
+          <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="ShowAnswer">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x44c; &#x43e;&#x442;&#x432;&#x435;&#x442;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ShowAnswerMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ShowAnswerActionPerformed"/>
+              </Events>
+            </MenuItem>
+          </SubComponents>
+        </Menu>
+        <Menu class="javax.swing.JMenu" name="jMenu2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Edit"/>
+          </Properties>
+        </Menu>
+      </SubComponents>
+    </Menu>
+  </NonVisualComponents>
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jTabbedPane1" alignment="1" min="-2" pref="1080" max="-2" attributes="0"/>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jTabbedPane1" min="-2" pref="805" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="22" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jPanel1">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="generateEquasionButton" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="generateImageButton" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="generateFileWithGivenAmountButton" alignment="0" pref="369" max="32767" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                              <Component id="numberOfEquasionsInFileLabel" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="varNameLabel" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="numberOfEquasionsInFileSpinner" min="-2" pref="43" max="-2" attributes="0"/>
+                                          <Component id="varNameTextField" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <Component id="ShowLinearEquasionAnswerCheckBox" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="numberOfMembersLabel" min="-2" pref="162" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="numberOfMembersSpinner" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="answerRangeLabel" min="-2" pref="162" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="answerRangeSpinner" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="bracketsDepthLabel" min="-2" pref="206" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="bracketsDepthSpinner" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" attributes="0">
+                                          <Component id="numberOfBracketsLabel" min="-2" pref="162" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                          <Component id="numberOfBracketsSpinner" min="-2" pref="40" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Component id="generateTreeButton1" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace pref="412" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="equasionTextField" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="generateEquasionButton" min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="equasionTextField" min="-2" pref="115" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="generateFileWithGivenAmountButton" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="numberOfEquasionsInFileLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numberOfEquasionsInFileSpinner" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="generateImageButton" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="varNameTextField" alignment="3" max="32767" attributes="0"/>
+                          <Component id="varNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ShowLinearEquasionAnswerCheckBox" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numberOfBracketsLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="numberOfBracketsSpinner" alignment="3" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bracketsDepthLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="bracketsDepthSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="answerRangeLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="answerRangeSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numberOfMembersSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="numberOfMembersLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="generateTreeButton1" min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace pref="333" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="generateEquasionButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateEquasionButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="equasionTextField">
+              <Properties>
+                <Property name="editable" type="boolean" value="false"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Agency FB" size="24" style="1"/>
+                </Property>
+                <Property name="toolTipText" type="java.lang.String" value=""/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfEquasionsInFileLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x439; &#x432; &#x444;&#x430;&#x439;&#x43b;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfEquasionsInFileSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="10" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="generateFileWithGivenAmountButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x444;&#x430;&#x439;&#x43b; &#x441; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x43c; &#x43a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e;&#x43c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x439;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateFileWithGivenAmountButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="generateImageButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x433;&#x440;&#x430;&#x439;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x439; &#x444;&#x430;&#x439;&#x43b; &#x441; &#x43e;&#x434;&#x43d;&#x438;&#x43c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;&#x43c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateImageButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfBracketsLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x441;&#x43a;&#x43e;&#x431;&#x43e;&#x43a;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfBracketsSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numberOfBracketsSpinnerStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="bracketsDepthSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="1" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="bracketsDepthSpinnerStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="bracketsDepthLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x432;&#x43b;&#x43e;&#x436;&#x435;&#x43d;&#x43d;&#x44b;&#x445; &#x441;&#x43a;&#x43e;&#x431;&#x43e;&#x43a;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="answerRangeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x413;&#x440;&#x430;&#x43d;&#x438;&#x446;&#x44b; &#x43e;&#x442;&#x432;&#x435;&#x442;&#x430;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="answerRangeSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="10" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfMembersLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x441;&#x43b;&#x430;&#x433;&#x430;&#x435;&#x43c;&#x44b;&#x445;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfMembersSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="5" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numberOfMembersSpinnerStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="generateTreeButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x434;&#x435;&#x440;&#x435;&#x432;&#x43e;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateTreeButton1MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="varNameTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="x"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="varNameLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x418;&#x43c;&#x44f; &#x43f;&#x435;&#x440;&#x435;&#x43c;&#x435;&#x43d;&#x43d;&#x43e;&#x439;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="ShowLinearEquasionAnswerCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x44c; &#x43e;&#x442;&#x432;&#x435;&#x442;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel7">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x414;&#x440;&#x443;&#x433;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x414;&#x440;&#x443;&#x433;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jSeparator5" pref="1075" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="PDFGenerateDenominatorButton" min="-2" pref="369" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numberOfDeniminatorTasksInDocumentLabel" max="32767" attributes="0"/>
+                                  <Component id="numberOfFractionsInDeniminatorTasksLabel" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numberOfDeniminatorTasksInDocumentSpinner" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="numberOfFractionsInDeniminatorTasksSpinner" min="-2" pref="47" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="numbersRangeInDeniminatorTasksLabel" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="numbersRangeInDeniminatorTasksSpinner" min="-2" pref="47" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="450" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="pdfEquasionSystemsButton" min="-2" pref="364" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="numberOfEquasionSystemsTasksInDocumentLabel" max="32767" attributes="0"/>
+                          <Component id="numberOfVariablesInEquasionSystemLabel" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="numberosEquasionSystemTasksInDocumentSpinner" pref="48" max="32767" attributes="0"/>
+                          <Component id="numberOfVariablesInEquasionSystemSpinner" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="RootSimplifyingTaskGenerateButton" min="-2" pref="369" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pdfEquasionSystemsButton" min="-2" pref="51" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="numberosEquasionSystemTasksInDocumentSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numberOfEquasionSystemsTasksInDocumentLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="numberOfVariablesInEquasionSystemLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numberOfVariablesInEquasionSystemSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numberOfDeniminatorTasksInDocumentLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numberOfDeniminatorTasksInDocumentSpinner" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="numberOfFractionsInDeniminatorTasksLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numberOfFractionsInDeniminatorTasksSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="numbersRangeInDeniminatorTasksLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numbersRangeInDeniminatorTasksSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="PDFGenerateDenominatorButton" min="-2" pref="71" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Component id="RootSimplifyingTaskGenerateButton" min="-2" pref="44" max="-2" attributes="0"/>
+                      <EmptySpace pref="554" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JSeparator" name="jSeparator5">
+            </Component>
+            <Component class="javax.swing.JButton" name="pdfEquasionSystemsButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Pdf &#x441; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43c;&#x430;&#x43c;&#x438; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x439;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pdfEquasionSystemsButtonMouseClicked"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pdfEquasionSystemsButtonActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="PDFGenerateDenominatorButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PDF &#x441; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435;&#x43c; &#x43d;&#x430; &#x43e;&#x431;&#x449;&#x438;&#x439; &#x437;&#x43d;&#x430;&#x43c;&#x435;&#x43d;&#x430;&#x442;&#x435;&#x43b;&#x44c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PDFGenerateDenominatorButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfEquasionSystemsTasksInDocumentLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439; &#x432; &#x434;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberosEquasionSystemTasksInDocumentSpinner">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="numberosEquasionSystemTasksInDocumentSpinner.setValue(10);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfVariablesInEquasionSystemLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x43d;&#x435;&#x438;&#x437;&#x432;&#x435;&#x441;&#x442;&#x43d;&#x44b;&#x445; &#x432; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43c;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfVariablesInEquasionSystemSpinner">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="numberOfVariablesInEquasionSystemSpinner.setValue(3);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="RootSimplifyingTaskGenerateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PDF &#x441; &#x443;&#x43f;&#x440;&#x43e;&#x449;&#x435;&#x43d;&#x438;&#x435;&#x43c; &#x43a;&#x43e;&#x440;&#x43d;&#x44f;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="RootSimplifyingTaskGenerateButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfDeniminatorTasksInDocumentLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439; &#x432; &#x434;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfDeniminatorTasksInDocumentSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="15" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="numberosEquasionSystemTasksInDocumentSpinner.setValue(10);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfFractionsInDeniminatorTasksLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x434;&#x440;&#x43e;&#x431;&#x435;&#x439;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfFractionsInDeniminatorTasksSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="4" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="numberosEquasionSystemTasksInDocumentSpinner.setValue(10);"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numbersRangeInDeniminatorTasksLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x431;&#x440;&#x43e;&#x441; &#x447;&#x438;&#x441;&#x435;&#x43b;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numbersRangeInDeniminatorTasksSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="6" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="numberosEquasionSystemTasksInDocumentSpinner.setValue(10);"/>
+              </AuxValues>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel8">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="tab4">
+                <Property name="tabTitle" type="java.lang.String" value="tab4"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="memberVariableTextField" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="memberCoeffTextField" alignment="0" pref="203" max="32767" attributes="0"/>
+                                  <Component id="polynomeMemberVarPowerfTextField" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+                              <Component id="polynomeStringTextField" min="-2" pref="441" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="clearPolynomeButton" min="-2" pref="119" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="generateTreeButton" alignment="0" min="-2" pref="203" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="polynomeStringTextField" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="memberVariableTextField" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="polynomeMemberVarPowerfTextField" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="memberCoeffTextField" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="clearPolynomeButton" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="generateTreeButton" min="-2" pref="39" max="-2" attributes="0"/>
+                      <EmptySpace pref="644" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="memberVariableTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="x"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="memberCoeffTextField">
+            </Component>
+            <Component class="javax.swing.JButton" name="jButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x434;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x447;&#x43b;&#x435;&#x43d;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="polynomeStringTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="0"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JFormattedTextField" name="polynomeMemberVarPowerfTextField">
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JFormattedTextField(df)"/>
+                <AuxValue name="JavaCodeGenerator_CreateCodePre" type="java.lang.String" value="DecimalFormat df = (DecimalFormat)DecimalFormat.getInstance();"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JButton" name="clearPolynomeButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x431;&#x440;&#x43e;&#x441;&#x438;&#x442;&#x44c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clearPolynomeButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="generateTreeButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x434;&#x435;&#x440;&#x435;&#x432;&#x43e;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateTreeButtonMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel9">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x41a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43d;&#x44b;&#x435; &#x442;&#x440;&#x435;&#x445;&#x447;&#x43b;&#x435;&#x43d;&#x44b;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x41a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43d;&#x44b;&#x435; &#x442;&#x440;&#x435;&#x445;&#x447;&#x43b;&#x435;&#x43d;&#x44b;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="SquareDifferenceCheckBox" min="-2" pref="193" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="FullSquareTaskGenerateButton" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="quadraticTrinomialRootsRangeLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="quadraticTrinomialRootsRangeSpinner" min="-2" pref="57" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="vietaIncludingNilCheckBox" min="-2" pref="118" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="quadraticTrinomialTextField" min="-2" pref="193" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="vietaOneEquasionButton" pref="327" max="32767" attributes="0"/>
+                                  <Component id="quadraticEquasionGenerateButton" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Component id="quadraticTrinomialNumberOfTasksLabel" min="-2" pref="248" max="-2" attributes="0"/>
+                                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                                  <Component id="quadraticTrinomialNumberOfExersisesSpinner" min="-2" pref="57" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="vietaOneEquasionButton1" max="32767" attributes="0"/>
+                              <Component id="QuadraticEquasionGeneratePDFButton" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="FullSquareTaskPDFButton" min="-2" pref="345" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="188" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="quadraticTrinomialRootsRangeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="quadraticTrinomialRootsRangeSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="quadraticTrinomialNumberOfTasksLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="quadraticTrinomialNumberOfExersisesSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="vietaIncludingNilCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="quadraticTrinomialTextField" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="vietaOneEquasionButton" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
+                          <Component id="vietaOneEquasionButton1" alignment="3" min="-2" pref="66" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
+                              <Component id="SquareDifferenceCheckBox" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="QuadraticEquasionGeneratePDFButton" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                                  <Component id="quadraticEquasionGenerateButton" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="FullSquareTaskGenerateButton" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                                  <Component id="FullSquareTaskPDFButton" alignment="3" min="-2" pref="56" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="508" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="quadraticTrinomialTextField">
+            </Component>
+            <Component class="javax.swing.JButton" name="vietaOneEquasionButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435; &#x43d;&#x430; &#x442;&#x435;&#x43e;&#x440;&#x435;&#x43c;&#x443; &#x412;&#x438;&#x435;&#x442;&#x430;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="vietaOneEquasionButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="quadraticTrinomialRootsRangeLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x431;&#x440;&#x43e;&#x441; &#x43a;&#x43e;&#x440;&#x43d;&#x435;&#x439;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="quadraticTrinomialRootsRangeSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="5" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="quadraticTrinomialNumberOfTasksLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439; &#x432; &#x444;&#x430;&#x439;&#x43b;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="quadraticTrinomialNumberOfExersisesSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="10" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="vietaOneEquasionButton1">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; PDF c &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x44f;&#x43c;&#x438; &#x43d;&#x430; &#x442;&#x435;&#x43e;&#x440;&#x435;&#x43c;&#x443; &#x412;&#x438;&#x435;&#x442;&#x430;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="vietaGeneratePDFButtonClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="vietaIncludingNilCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x412;&#x43a;&#x43b;&#x443;&#x44e;&#x447;&#x430;&#x44f; &#x43d;&#x43e;&#x43b;&#x44c;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="FullSquareTaskGenerateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435; &#x43d;&#x430; &#x432;&#x44b;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x43f;&#x43e;&#x43b;&#x43d;&#x43e;&#x433;&#x43e; &#x43a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x430;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FullSquareTaskGenerateButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="FullSquareTaskPDFButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="PDF &#x441; &#x43f;&#x43e;&#x43b;&#x43d;&#x44b;&#x43c; &#x43a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43e;&#x43c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="FullSquareTaskPDFButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="SquareDifferenceCheckBox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421; &#x440;&#x430;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c;&#x44e; &#x43a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43e;&#x432;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SquareDifferenceCheckBoxActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="quadraticEquasionGenerateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x43a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43d;&#x43e;&#x435; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="quadraticEquasionGenerateButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="QuadraticEquasionGeneratePDFButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; PDF &#x441;  &#x43a;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43d;&#x44b;&#x43c;&#x438; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x44f;&#x43c;&#x438;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="QuadraticEquasionGeneratePDFButtonMouseClicked"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel10">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x41e;&#x442;&#x440;&#x438;&#x446;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x447;&#x438;&#x441;&#x43b;&#x430;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x41e;&#x442;&#x440;&#x438;&#x446;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x447;&#x438;&#x441;&#x43b;&#x430;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="NegativeTextField" min="-2" pref="452" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="NegativeStringGenegateButton" min="-2" pref="326" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numberOfBracketsInNegativeTaskLabel" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                                  <Component id="numberOfMembersInNegativeTaskLabel" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                                  <Component id="numbersRangeInNegativeTaskLabel" alignment="0" min="-2" pref="162" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numberOfBracketsInNegativeTaskSpinner" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="numberOfMembersInNegativeTaskSpinner" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="numbersRangeInNegativeTaskSpinner" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="negativePdfGenegate" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="NegativePdfNumberOfStringsLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="NegativePdfNumberOfStringsSpinner" min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="269" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="NegativeStringGenegateButton" min="-2" pref="44" max="-2" attributes="0"/>
+                          <Component id="NegativeTextField" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numberOfBracketsInNegativeTaskLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="numberOfBracketsInNegativeTaskSpinner" alignment="3" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numberOfMembersInNegativeTaskLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="numberOfMembersInNegativeTaskSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="numbersRangeInNegativeTaskLabel" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Component id="numbersRangeInNegativeTaskSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="negativePdfGenegate" pref="36" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="NegativePdfNumberOfStringsLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NegativePdfNumberOfStringsSpinner" alignment="3" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="576" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="NegativeTextField">
+            </Component>
+            <Component class="javax.swing.JToggleButton" name="NegativeStringGenegateButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x441;&#x442;&#x440;&#x43e;&#x447;&#x43a;&#x443; &#x441; &#x43e;&#x442;&#x440;&#x438;&#x446;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x43c;&#x438; &#x447;&#x438;&#x441;&#x43b;&#x430;&#x43c;&#x438;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="NegativeStringGenegateButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="negativePdfGenegate">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; PDF &#x441; &#x43e;&#x442;&#x440;&#x438;&#x446;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x43c;&#x438; &#x447;&#x438;&#x441;&#x43b;&#x430;&#x43c;&#x438;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="negativePdfGenegateMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="NegativePdfNumberOfStringsSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="10" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="NegativePdfNumberOfStringsLabel4">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439; &#x432; &#x434;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfBracketsInNegativeTaskLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x441;&#x43a;&#x43e;&#x431;&#x43e;&#x43a;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfBracketsInNegativeTaskSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="2" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numberOfBracketsInNegativeTaskSpinnerStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numberOfMembersInNegativeTaskLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x441;&#x43b;&#x430;&#x433;&#x430;&#x435;&#x43c;&#x44b;&#x445;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numberOfMembersInNegativeTaskSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="8" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numberOfMembersInNegativeTaskSpinnerStateChanged"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="numbersRangeInNegativeTaskLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41c;&#x430;&#x43a;&#x441;&#x438;&#x43c;&#x430;&#x43b;&#x44c;&#x43d;&#x43e;&#x435; &#x447;&#x438;&#x441;&#x43b;&#x43e;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="numbersRangeInNegativeTaskSpinner">
+              <Properties>
+                <Property name="requestFocusEnabled" type="boolean" value="false"/>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="15" type="code"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="numbersRangeInNegativeTaskSpinnerStateChanged"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel2">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x415;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x44b; &#x438;&#x437;&#x43c;&#x435;&#x440;&#x435;&#x43d;&#x438;&#x44f;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x415;&#x434;&#x438;&#x43d;&#x438;&#x446;&#x44b; &#x438;&#x437;&#x43c;&#x435;&#x440;&#x435;&#x43d;&#x438;&#x44f;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="335" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="measurementUnitsNumberOfTasksLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="measurementUnitsNumberOfTasksSpinner" min="-2" pref="47" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="measurementUnitsGenerateTaskButton" min="-2" pref="162" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="562" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jScrollPane1" min="-2" pref="206" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="measurementUnitsGenerateTaskButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="measurementUnitsNumberOfTasksLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="measurementUnitsNumberOfTasksSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="560" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="measurementUnitsGenerateTaskButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x441;&#x433;&#x435;&#x43d;&#x438;&#x440;&#x43e;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x435;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="measurementUnitsGenerateTaskButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="measurementUnitsNumberOfTasksLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="measurementUnitsNumberOfTasksSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="10" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JTextArea" name="measurementUnitsTextArea">
+                  <Properties>
+                    <Property name="columns" type="int" value="20"/>
+                    <Property name="rows" type="int" value="5"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+        <Container class="javax.swing.JPanel" name="jPanel11">
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
+              <JTabbedPaneConstraints tabName="&#x41f;&#x435;&#x440;&#x435;&#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x43c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d;&#x43e;&#x432;">
+                <Property name="tabTitle" type="java.lang.String" value="&#x41f;&#x435;&#x440;&#x435;&#x43c;&#x43d;&#x43e;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x43c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d;&#x43e;&#x432;"/>
+              </JTabbedPaneConstraints>
+            </Constraint>
+          </Constraints>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="PolynomeTextField" min="-2" pref="634" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="firstFactorTextField" min="-2" pref="240" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="secondFactorTextField" min="-2" pref="240" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="generateFactorsTextField" min="-2" pref="185" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="341" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="dividedPolynomePowerlabel" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="GeneratePolynomeByGivenRootsButton" min="-2" pref="156" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="polynomeRootsRangeSpinner" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="PolynomeRootsRange" min="-2" pref="100" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="PolynomeTaskWithRemCheckbox" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="polynomeRootsNumberSpinner" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="polynomeRootsNumberLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="PolynomeRootsIncludingNill" min="-2" pref="156" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="PolynomeGenerateRandomButton" min="-2" pref="166" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="dividedPolynomePowerSpinner" min="-2" pref="43" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="multiplyPolynomesButton" min="-2" pref="143" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="RootsListLabel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="divisorPolynomePowerLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="divisorPolynomePowerSpinner" min="-2" pref="44" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="PolynomeTasksInDocumentNumberLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="PolynomeTasksInDocumentNumberSpinner" min="-2" pref="38" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="PolynimeDivisionTaskDocument" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="generateFactorsTextField" min="-2" pref="61" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="firstFactorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="secondFactorTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="PolynomeTextField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                      <Component id="RootsListLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="polynomeRootsNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="polynomeRootsNumberSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PolynomeRootsIncludingNill" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PolynomeGenerateRandomButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="PolynomeRootsRange" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="polynomeRootsRangeSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="PolynomeTaskWithRemCheckbox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
+                          <Component id="GeneratePolynomeByGivenRootsButton" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="dividedPolynomePowerlabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="dividedPolynomePowerSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="divisorPolynomePowerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="divisorPolynomePowerSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="multiplyPolynomesButton" alignment="1" min="-2" pref="49" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="PolynomeTasksInDocumentNumberLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="PolynomeTasksInDocumentNumberSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="PolynimeDivisionTaskDocument" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="410" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JTextField" name="firstFactorTextField">
+            </Component>
+            <Component class="javax.swing.JTextField" name="secondFactorTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="secondFactorTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JTextField" name="PolynomeTextField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PolynomeTextFieldActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="multiplyPolynomesButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x43f;&#x435;&#x440;&#x435;&#x43c;&#x43d;&#x43e;&#x436;&#x438;&#x442;&#x44c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="multiplyPolynomesButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="generateFactorsTextField">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x433;&#x435;&#x43d;&#x435;&#x440;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x442;&#x44c; &#x43c;&#x43d;&#x43e;&#x436;&#x438;&#x442;&#x435;&#x43b;&#x438;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="generateFactorsTextFieldMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="polynomeRootsNumberLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x41a;&#x43e;&#x440;&#x43d;&#x435;&#x439;"/>
+              </Properties>
+            </Component>
+            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+              <AuxValues>
+                <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+              </AuxValues>
+
+              <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+              <SubComponents>
+                <Component class="javax.swing.JList" name="polynomeRootsjList">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
+                      <StringArray count="0"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="polynomeRootsjListPropertyChange"/>
+                  </Events>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Component class="javax.swing.JSpinner" name="polynomeRootsNumberSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="5" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="RootsListLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x440;&#x43d;&#x438;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="PolynomeRootsRange">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x420;&#x430;&#x437;&#x431;&#x440;&#x43e;&#x441; &#x41a;&#x43e;&#x440;&#x43d;&#x435;&#x439;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="polynomeRootsRangeSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="6" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="PolynomeRootsIncludingNill">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x412;&#x43a;&#x43b;&#x44e;&#x447;&#x430;&#x44f; &#x43d;&#x43e;&#x43b;&#x44c;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="GeneratePolynomeByGivenRootsButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d; &#x43f;&#x43e; &#x43a;&#x43e;&#x440;&#x43d;&#x44f;&#x43c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GeneratePolynomeByGivenRootsButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="PolynomeGenerateRandomButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x43b;&#x443;&#x447;&#x430;&#x439;&#x43d;&#x44b;&#x439; &#x41c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PolynomeGenerateRandomButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="dividedPolynomePowerlabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x442;&#x435;&#x43f;&#x435;&#x43d;&#x44c; &#x434;&#x435;&#x43b;&#x438;&#x43c;&#x43e;&#x433;&#x43e;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="divisorPolynomePowerLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x442;&#x435;&#x43f;&#x435;&#x43d;&#x44c; &#x434;&#x435;&#x43b;&#x438;&#x442;&#x435;&#x43b;&#x44f;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="dividedPolynomePowerSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="3" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="divisorPolynomePowerSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="2" type="code"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="PolynomeTasksInDocumentNumberLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x439; &#x432; &#x434;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="PolynomeTasksInDocumentNumberSpinner">
+            </Component>
+            <Component class="javax.swing.JButton" name="PolynimeDivisionTaskDocument">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442; &#x441; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f;&#x43c;&#x438; &#x43d;&#x430; &#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x43c;&#x43d;&#x43e;&#x433;&#x43e;&#x447;&#x43b;&#x435;&#x43d;&#x43e;&#x432;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PolynimeDivisionTaskDocumentMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JCheckBox" name="PolynomeTaskWithRemCheckbox">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x43c;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
