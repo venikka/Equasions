@@ -524,6 +524,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="PDF &#x441; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x438;&#x44f;&#x43c;&#x438; &#x43d;&#x430; &#x434;&#x435;&#x43b;&#x435;&#x43d;&#x438;&#x435; &#x432; &#x441;&#x442;&#x43e;&#x43b;&#x431;&#x438;&#x43a;"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="longDivisionTaskDocumentButtonMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

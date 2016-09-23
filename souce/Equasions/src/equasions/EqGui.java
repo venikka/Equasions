@@ -10,6 +10,7 @@ import Algebra.BracketTreeNode;
 import Algebra.DenominatorTask;
 import Algebra.EquasionSystem;
 import Algebra.FullSquareTask;
+import Algebra.LongDivisionTask;
 import Algebra.MathFunction;
 import Algebra.MeasurementUnitsTask;
 import Algebra.PowerFunction;
@@ -380,6 +381,11 @@ public class EqGui extends javax.swing.JFrame {
         numbersRangeInDeniminatorTasksSpinner.setValue(6);
 
         longDivisionTaskDocumentButton.setText("PDF с заданиями на деление в столбик");
+        longDivisionTaskDocumentButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                longDivisionTaskDocumentButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -1507,6 +1513,26 @@ public class EqGui extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_MeasurementUnitsTaskGenerteDocumetButtonMouseClicked
+
+    private void longDivisionTaskDocumentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_longDivisionTaskDocumentButtonMouseClicked
+        String tasks = "";
+        for (int i = 0; i < (int)numberosEquasionSystemTasksInDocumentSpinner.getValue(); i++){
+           tasks += i + 1 + ") \\mbox{ }" + LongDivisionTask.generateLongDivisionTaskSingleDigitDivisor(3) + "\\\\";           
+        }
+        String formula = "$$" + tasks + "$$";
+        ArrayList<TeXFormula> formulas = new ArrayList<>();
+        TeXFormula header1 = new TeXFormula("\\mbox{\\bf{\\Huge{Выполнить деление}}}");        
+        header1.textStyle = "center";
+        formulas.add(header1);
+        formulas.add(new TeXFormula(formula));
+        try {
+            //TeXConverter.toSVG(formula, "math.svg", false);
+            TeXConverter.toSVGComplexFormula(formulas, "math.svg", false);
+            TeXConverter.SVGTo("math.svg", "Деление в столбик.pdf", TeXConverter.PDF);
+        } catch (IOException ex) {
+            Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_longDivisionTaskDocumentButtonMouseClicked
    
     /**
      * @param args the command line arguments
