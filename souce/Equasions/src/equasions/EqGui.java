@@ -91,6 +91,7 @@ public class EqGui extends javax.swing.JFrame {
         numberOfFractionsInDeniminatorTasksSpinner = new javax.swing.JSpinner();
         numbersRangeInDeniminatorTasksLabel = new javax.swing.JLabel();
         numbersRangeInDeniminatorTasksSpinner = new javax.swing.JSpinner();
+        longDivisionTaskDocumentButton = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         memberVariableTextField = new javax.swing.JTextField();
         memberCoeffTextField = new javax.swing.JTextField();
@@ -132,6 +133,7 @@ public class EqGui extends javax.swing.JFrame {
         measurementUnitsNumberOfTasksSpinner = new javax.swing.JSpinner();
         jScrollPane1 = new javax.swing.JScrollPane();
         measurementUnitsTextArea = new javax.swing.JTextArea();
+        MeasurementUnitsTaskGenerteDocumetButton = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
         firstFactorTextField = new javax.swing.JTextField();
         secondFactorTextField = new javax.swing.JTextField();
@@ -377,6 +379,8 @@ public class EqGui extends javax.swing.JFrame {
         numberosEquasionSystemTasksInDocumentSpinner.setValue(10);
         numbersRangeInDeniminatorTasksSpinner.setValue(6);
 
+        longDivisionTaskDocumentButton.setText("PDF с заданиями на деление в столбик");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -411,7 +415,9 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(numberOfVariablesInEquasionSystemSpinner))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -446,7 +452,9 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(PDFGenerateDenominatorButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(34, 34, 34)
                 .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(554, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(507, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Другие задания", jPanel7);
@@ -769,6 +777,18 @@ public class EqGui extends javax.swing.JFrame {
         measurementUnitsTextArea.setRows(5);
         jScrollPane1.setViewportView(measurementUnitsTextArea);
 
+        MeasurementUnitsTaskGenerteDocumetButton.setText("Документ с заданиями");
+        MeasurementUnitsTaskGenerteDocumetButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MeasurementUnitsTaskGenerteDocumetButtonMouseClicked(evt);
+            }
+        });
+        MeasurementUnitsTaskGenerteDocumetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MeasurementUnitsTaskGenerteDocumetButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -777,12 +797,13 @@ public class EqGui extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(measurementUnitsNumberOfTasksLabel)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(measurementUnitsNumberOfTasksSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(measurementUnitsGenerateTaskButton, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(measurementUnitsGenerateTaskButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(MeasurementUnitsTaskGenerteDocumetButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(562, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -794,6 +815,8 @@ public class EqGui extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(measurementUnitsGenerateTaskButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(MeasurementUnitsTaskGenerteDocumetButton)
+                        .addGap(11, 11, 11)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(measurementUnitsNumberOfTasksLabel)
                             .addComponent(measurementUnitsNumberOfTasksSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -1459,6 +1482,31 @@ public class EqGui extends javax.swing.JFrame {
             Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_PolynomeDivisionTaskDocumentMouseClicked
+
+    private void MeasurementUnitsTaskGenerteDocumetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MeasurementUnitsTaskGenerteDocumetButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MeasurementUnitsTaskGenerteDocumetButtonActionPerformed
+
+    private void MeasurementUnitsTaskGenerteDocumetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MeasurementUnitsTaskGenerteDocumetButtonMouseClicked
+        String tasks = "";
+        for (int i = 0; i < (int)measurementUnitsNumberOfTasksSpinner.getValue(); i++){
+           tasks += i + 1 + ") " + MeasurementUnitsTask.generateTexMeasurementUnitsTask();           
+        }
+        String formula = "$$" + tasks + "$$";
+        ArrayList<TeXFormula> formulas = new ArrayList<>();
+        TeXFormula header1 = new TeXFormula("\\mbox{\\bf{\\Huge{Единицы Измерения}}}");        
+        header1.textStyle = "center";
+        formulas.add(header1);
+        formulas.add(new TeXFormula(formula));
+        try {
+            //TeXConverter.toSVG(formula, "math.svg", false);
+            TeXConverter.toSVGComplexFormula(formulas, "math.svg", false);
+            TeXConverter.SVGTo("math.svg", "Единицы измерения.pdf", TeXConverter.PDF);
+        } catch (IOException ex) {
+            Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_MeasurementUnitsTaskGenerteDocumetButtonMouseClicked
    
     /**
      * @param args the command line arguments
@@ -1500,6 +1548,7 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JButton FullSquareTaskGenerateButton;
     private javax.swing.JButton FullSquareTaskPDFButton;
     private javax.swing.JButton GeneratePolynomeByGivenRootsButton;
+    private javax.swing.JButton MeasurementUnitsTaskGenerteDocumetButton;
     private javax.swing.JLabel NegativePdfNumberOfStringsLabel4;
     private javax.swing.JSpinner NegativePdfNumberOfStringsSpinner;
     private javax.swing.JToggleButton NegativeStringGenegateButton;
@@ -1551,6 +1600,7 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JButton longDivisionTaskDocumentButton;
     private javax.swing.JButton measurementUnitsGenerateTaskButton;
     private javax.swing.JLabel measurementUnitsNumberOfTasksLabel;
     private javax.swing.JSpinner measurementUnitsNumberOfTasksSpinner;

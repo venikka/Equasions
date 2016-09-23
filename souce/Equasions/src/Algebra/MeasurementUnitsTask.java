@@ -5,8 +5,8 @@
  */
 package Algebra;
 
-import Algebra.Measurement.MeasurementUnit;
-import Algebra.Measurement.NumberUnit;
+
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -19,7 +19,7 @@ public class MeasurementUnitsTask {
     public static String generateMeasurementUnitsTask (){
         String result = "";
         Random rnd = new Random();        
-        MeasurementUnit unit = new NumberUnit();                
+        MeasurementUnit unit = new MeasurementUnit();                
         ArrayList<String> finalUnits = unit.getDecompositionUnits(3);
         result = "Разложите " + unit.toString() + " на ";
         if (finalUnits.size() == 1){
@@ -35,6 +35,17 @@ public class MeasurementUnitsTask {
             }
         }
         return result;
+    }
+    public static String generateTexMeasurementUnitsTask (){
+        String result = "\\mbox{ }";
+        Random rnd = new Random();        
+        MeasurementUnit unit = new MeasurementUnit();                
+        ArrayList<String> finalUnits = unit.getDecompositionUnits(3);
+        result = unit.toString() + " = ";        
+        for (int i = 0; i < finalUnits.size(); i++){            
+            result += "\\fbox{\\rule{5in}{0pt}\\rule[-0.1ex]{0pt}{1.5ex}}" + "  " + finalUnits.get(i) + "  ";
+        }        
+        return result + "\\\\";
     }
     /*public String decomposeAs(MeasurementUnits units, Integer numberToDecompose){
         return null;

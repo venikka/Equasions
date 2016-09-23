@@ -5,7 +5,7 @@
  */
 package Algebra;
 
-import Algebra.Measurement.CommonMeasurementUnit;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
@@ -96,11 +96,14 @@ public class MeasurementUnit{
     }    
     @Override
     public String toString(){
-        String result = value + " " +units.getName();
+        String result = Integer.toString(value);
+        if (units != Units.ones){
+            result +=  " " + units.getName();
+        }
         return result;
     }
     
-    public static enum Units implements CommonMeasurementUnit{
+    public static enum Units{
         //numbers
         ones (1, "ед.", MeasurementUnitTypes.number),
         tens (10, "дес.", MeasurementUnitTypes.number),
