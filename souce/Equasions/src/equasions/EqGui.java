@@ -1425,6 +1425,7 @@ public class EqGui extends javax.swing.JFrame {
     }//GEN-LAST:event_secondFactorTextFieldActionPerformed
 
     private void PolynomeDivisionTaskDocumentMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PolynomeDivisionTaskDocumentMouseClicked
+        //TODO: make flexible task making option
         Polynome firstFactor;
         Polynome secondFactor;
         Polynome combination;
