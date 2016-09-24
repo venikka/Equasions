@@ -105,6 +105,7 @@ public class MeasurementUnit{
     
     public static enum Units{
         //numbers
+//numbers
         ones (1, "ед.", MeasurementUnitTypes.number),
         tens (10, "дес.", MeasurementUnitTypes.number),
         hundreds (100, "сот.", MeasurementUnitTypes.number),
@@ -112,25 +113,25 @@ public class MeasurementUnit{
         tenthousands(10000, "дес. тыс.", MeasurementUnitTypes.number),
         hundredthousands (100000, "сот. тыс.", MeasurementUnitTypes.number),
         millions (1000000, "млн.", MeasurementUnitTypes.number),
-        tenmillions (10000000, "дес. млн.", MeasurementUnitTypes.number),
-        hundredmillions (100000000, "сот. млн.", MeasurementUnitTypes.number),
-        billions (1000000000, "млрд.", MeasurementUnitTypes.number),
+        //tenmillions (10000000, "дес. млн.", MeasurementUnitTypes.number),
+        //hundredmillions (100000000, "сот. млн.", MeasurementUnitTypes.number),
+        //billions (1000000000, "млрд.", MeasurementUnitTypes.number),
         //Mass
-        grams (1, "г.", MeasurementUnitTypes.mass),
-        kilograms (1000, "кг.", MeasurementUnitTypes.mass),
-        centners (100000, "ц.", MeasurementUnitTypes.mass),
-        tons (1000000, "т.", MeasurementUnitTypes.mass),
+        grams (1, " г.", MeasurementUnitTypes.mass),
+        kilograms (1000, " кг.", MeasurementUnitTypes.mass),
+        centners (1000000, " ц.", MeasurementUnitTypes.mass),
+        tons (1000000, " т.", MeasurementUnitTypes.mass),
         //length
         milimeters(1, "мм.", MeasurementUnitTypes.length),
         cantimeters(10, "см.", MeasurementUnitTypes.length),
         decemeters(100, "дм.", MeasurementUnitTypes.length),
         meters(1000, "м.", MeasurementUnitTypes.length),
-        kiilometers(1000000, "км.", MeasurementUnitTypes.length),        
+        kilometers(1000000, "км.", MeasurementUnitTypes.length),        
         //time
         seconds (1, "сек.", MeasurementUnitTypes.time),
         minutes (60, "мин.", MeasurementUnitTypes.time),
-        hours (360, "ч.", MeasurementUnitTypes.time),
-        days (8640, "сут.", MeasurementUnitTypes.time),                
+        hours (3600, "ч.", MeasurementUnitTypes.time),
+        //days (86400, "сут.", MeasurementUnitTypes.time),                
         ;
         private final int inMinimalUnits;
         private final String name;
@@ -153,11 +154,11 @@ public class MeasurementUnit{
         }
     }
      public static enum MeasurementUnitTypes{
-        number (2000000000),
+        number (2000000),
         mass (200000000),
         length (100000000),
         //area,
-        time (70000);
+        time (360000);
         private final int maxValueInMinimalUnits;
 
         private MeasurementUnitTypes(int maxinMinUnits) {

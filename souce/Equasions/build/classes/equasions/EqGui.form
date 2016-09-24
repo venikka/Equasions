@@ -348,10 +348,13 @@
                                   <Component id="numberOfFractionsInDeniminatorTasksSpinner" min="-2" pref="47" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="numbersRangeInDeniminatorTasksLabel" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="numbersRangeInDeniminatorTasksSpinner" min="-2" pref="47" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="NumberOfDigitsInDividedSpinner" max="32767" attributes="0"/>
+                                  <Component id="numbersRangeInDeniminatorTasksSpinner" pref="47" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="450" max="-2" attributes="0"/>
@@ -375,6 +378,8 @@
                           <Component id="longDivisionTaskDocumentButton" max="32767" attributes="0"/>
                           <Component id="RootSimplifyingTaskGenerateButton" pref="369" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="NumberOfDigitsInDividedLabel" min="-2" pref="164" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -421,7 +426,13 @@
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="RootSimplifyingTaskGenerateButton" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="longDivisionTaskDocumentButton" min="-2" pref="41" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="longDivisionTaskDocumentButton" min="-2" pref="41" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="NumberOfDigitsInDividedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="NumberOfDigitsInDividedSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
                       <EmptySpace pref="507" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -527,6 +538,18 @@
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="longDivisionTaskDocumentButtonMouseClicked"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="NumberOfDigitsInDividedLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x43d;&#x430;&#x43a;&#x43e;&#x432; &#x432; &#x434;&#x435;&#x43b;&#x438;&#x43c;&#x43e;&#x43c;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="NumberOfDigitsInDividedSpinner">
+              <Properties>
+                <Property name="value" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="3" type="code"/>
+                </Property>
+              </Properties>
             </Component>
           </SubComponents>
         </Container>

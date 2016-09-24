@@ -20,7 +20,7 @@ public class MeasurementUnitsTask {
         String result = "";
         Random rnd = new Random();        
         MeasurementUnit unit = new MeasurementUnit();                
-        ArrayList<String> finalUnits = unit.getDecompositionUnits(3);
+        ArrayList<String> finalUnits = unit.getDecompositionUnits(2);
         result = "Разложите " + unit.toString() + " на ";
         if (finalUnits.size() == 1){
             result += finalUnits.get(0);
@@ -40,7 +40,7 @@ public class MeasurementUnitsTask {
         String result = "\\mbox{ }";
         Random rnd = new Random();        
         MeasurementUnit unit = new MeasurementUnit();                
-        ArrayList<String> finalUnits = unit.getDecompositionUnits(3);
+        ArrayList<String> finalUnits = unit.getDecompositionUnits(2);
         result = unit.toString() + " = ";        
         for (int i = 0; i < finalUnits.size(); i++){            
             result += "\\fbox{\\rule{5in}{0pt}\\rule[-0.1ex]{0pt}{1.5ex}}" + "  " + finalUnits.get(i) + "  ";

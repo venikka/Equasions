@@ -93,6 +93,8 @@ public class EqGui extends javax.swing.JFrame {
         numbersRangeInDeniminatorTasksLabel = new javax.swing.JLabel();
         numbersRangeInDeniminatorTasksSpinner = new javax.swing.JSpinner();
         longDivisionTaskDocumentButton = new javax.swing.JButton();
+        NumberOfDigitsInDividedLabel = new javax.swing.JLabel();
+        NumberOfDigitsInDividedSpinner = new javax.swing.JSpinner();
         jPanel8 = new javax.swing.JPanel();
         memberVariableTextField = new javax.swing.JTextField();
         memberCoeffTextField = new javax.swing.JTextField();
@@ -387,6 +389,10 @@ public class EqGui extends javax.swing.JFrame {
             }
         });
 
+        NumberOfDigitsInDividedLabel.setText("Количество знаков в делимом");
+
+        NumberOfDigitsInDividedSpinner.setValue(3);
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -404,10 +410,12 @@ public class EqGui extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(numberOfDeniminatorTasksInDocumentSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(numberOfFractionsInDeniminatorTasksSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                         .addComponent(numbersRangeInDeniminatorTasksLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(numbersRangeInDeniminatorTasksSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(NumberOfDigitsInDividedSpinner)
+                            .addComponent(numbersRangeInDeniminatorTasksSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))))
                 .addGap(450, 450, 450))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(pdfEquasionSystemsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -424,6 +432,8 @@ public class EqGui extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(NumberOfDigitsInDividedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -459,7 +469,11 @@ public class EqGui extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(NumberOfDigitsInDividedLabel)
+                        .addComponent(NumberOfDigitsInDividedSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(507, Short.MAX_VALUE))
         );
 
@@ -1417,10 +1431,7 @@ public class EqGui extends javax.swing.JFrame {
     }//GEN-LAST:event_GeneratePolynomeByGivenRootsButtonMouseClicked
 
     private void polynomeRootsjListPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_polynomeRootsjListPropertyChange
-        polynomeRoots = new ArrayList<Integer>();
-        for (int i = 0; i < polynomeRootsjList.getModel().getSize() - 1; i++){
-            polynomeRoots.add((Integer)polynomeRootsjList.getModel().getElementAt(i));
-        }
+        
     }//GEN-LAST:event_polynomeRootsjListPropertyChange
 
     private void generateFactorsTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_generateFactorsTextFieldMouseClicked
@@ -1517,7 +1528,7 @@ public class EqGui extends javax.swing.JFrame {
     private void longDivisionTaskDocumentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_longDivisionTaskDocumentButtonMouseClicked
         String tasks = "";
         for (int i = 0; i < (int)numberosEquasionSystemTasksInDocumentSpinner.getValue(); i++){
-           tasks += i + 1 + ") \\mbox{ }" + LongDivisionTask.generateLongDivisionTaskSingleDigitDivisor(3) + "\\\\";           
+           tasks += i + 1 + ") \\mbox{ }" + LongDivisionTask.generateLongDivisionTaskSingleDigitDivisor((int)NumberOfDigitsInDividedSpinner.getValue()) + "\\\\";           
         }
         String formula = "$$" + tasks + "$$";
         ArrayList<TeXFormula> formulas = new ArrayList<>();
@@ -1579,6 +1590,8 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JSpinner NegativePdfNumberOfStringsSpinner;
     private javax.swing.JToggleButton NegativeStringGenegateButton;
     private javax.swing.JTextField NegativeTextField;
+    private javax.swing.JLabel NumberOfDigitsInDividedLabel;
+    private javax.swing.JSpinner NumberOfDigitsInDividedSpinner;
     private javax.swing.JButton PDFGenerateDenominatorButton;
     private javax.swing.JButton PolynomeDivisionTaskDocument;
     private javax.swing.JButton PolynomeGenerateRandomButton;

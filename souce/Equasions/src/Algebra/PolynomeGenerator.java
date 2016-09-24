@@ -28,7 +28,7 @@ public class PolynomeGenerator {
     public static Polynome BasicBinome (String var, Integer root){
         Polynome basicBinome = new Polynome();
         basicBinome.members.add(new PolynomeMember(var, 1, 1));
-        basicBinome.members.add(new PolynomeMember(new MathFunction(), 0, root));            
+        basicBinome.members.add(new PolynomeMember(new MathFunction(), 0, -root));            
         return basicBinome;
     }
     public static Polynome randomPolynome(String var, int power, int coeffRange, boolean monic){

@@ -16,8 +16,8 @@ public class LongDivisionTask {
         String result = "";
         Random rnd = new Random();
         int divisor = Util.Rndm.showRandomInteger(2, 9, rnd, false);
-        int minRatio = 100/divisor ;        
-        int maxRatio = 1000 / divisor;        
+        int minRatio = (int)Math.pow(10, dividedNumberLength - 1)/divisor ;        
+        int maxRatio = (int)Math.pow(10, dividedNumberLength) / divisor;        
         int ratio = Util.Rndm.showRandomInteger(minRatio, maxRatio, rnd, false);
         result += ratio*divisor + " : " + divisor;
         return result;
