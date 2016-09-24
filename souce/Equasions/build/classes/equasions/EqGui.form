@@ -1180,6 +1180,8 @@
                                       <Component id="PolynomeTasksInDocumentNumberSpinner" min="-2" pref="38" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="PolynomeDivisionTaskDocument" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="PolynomeWithOneKnownRootTaskButton" max="32767" attributes="0"/>
+                                  <Component id="GornerTaskButton" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
@@ -1245,7 +1247,11 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="PolynomeDivisionTaskDocument" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="410" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="PolynomeWithOneKnownRootTaskButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="GornerTaskButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="352" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1391,6 +1397,22 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="&#x421; &#x43e;&#x441;&#x442;&#x430;&#x442;&#x43a;&#x43e;&#x43c;"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="PolynomeWithOneKnownRootTaskButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442; &#x43d;&#x430; &#x43d;&#x430;&#x445;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x43a;&#x43e;&#x440;&#x43d;&#x435;&#x439;, &#x441; 1 &#x438;&#x437;&#x432;&#x435;&#x441;&#x442;&#x43d;&#x44b;&#x43c; &#x43a;&#x43e;&#x440;&#x43d;&#x435;&#x43c;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PolynomeWithOneKnownRootTaskButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="GornerTaskButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x421;&#x445;&#x435;&#x43c;&#x430; &#x413;&#x43e;&#x440;&#x43d;&#x435;&#x440;&#x430;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="GornerTaskButtonMouseClicked"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

@@ -161,6 +161,8 @@ public class EqGui extends javax.swing.JFrame {
         PolynomeTasksInDocumentNumberSpinner = new javax.swing.JSpinner();
         PolynomeDivisionTaskDocument = new javax.swing.JButton();
         PolynomeTaskWithRemCheckbox = new javax.swing.JCheckBox();
+        PolynomeWithOneKnownRootTaskButton = new javax.swing.JButton();
+        GornerTaskButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         ShowAnswer = new javax.swing.JMenuItem();
@@ -923,6 +925,20 @@ public class EqGui extends javax.swing.JFrame {
 
         PolynomeTaskWithRemCheckbox.setText("С остатком");
 
+        PolynomeWithOneKnownRootTaskButton.setText("Документ на нахождение корней, с 1 известным корнем");
+        PolynomeWithOneKnownRootTaskButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PolynomeWithOneKnownRootTaskButtonMouseClicked(evt);
+            }
+        });
+
+        GornerTaskButton.setText("Схема Горнера");
+        GornerTaskButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                GornerTaskButtonMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -980,7 +996,9 @@ public class EqGui extends javax.swing.JFrame {
                                 .addComponent(PolynomeTasksInDocumentNumberLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PolynomeTasksInDocumentNumberSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(PolynomeDivisionTaskDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(PolynomeDivisionTaskDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(PolynomeWithOneKnownRootTaskButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(GornerTaskButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel11Layout.setVerticalGroup(
@@ -1029,7 +1047,11 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(PolynomeTasksInDocumentNumberSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PolynomeDivisionTaskDocument)
-                .addGap(410, 410, 410))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PolynomeWithOneKnownRootTaskButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(GornerTaskButton)
+                .addGap(352, 352, 352))
         );
 
         jTabbedPane1.addTab("Перемножение многочленов", jPanel11);
@@ -1544,6 +1566,68 @@ public class EqGui extends javax.swing.JFrame {
             Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_longDivisionTaskDocumentButtonMouseClicked
+
+    private void PolynomeWithOneKnownRootTaskButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PolynomeWithOneKnownRootTaskButtonMouseClicked
+        int rootsNumber = (int)polynomeRootsNumberSpinner.getValue();
+        ArrayList<Integer> roots = new ArrayList<Integer>();
+        Random rnd = new Random();                        
+        Polynome polynomeByRoots;
+        String tasks = "";
+        for (int i = 0; i < (int)PolynomeTasksInDocumentNumberSpinner.getValue(); i++){
+            roots.clear();
+            for (int j = 0; j < rootsNumber; j++){
+                int root = Util.Rndm.showRandomInteger(-(int)polynomeRootsRangeSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(), rnd, PolynomeRootsIncludingNill.isSelected());
+                roots.add(root);            
+            }        
+            polynomeByRoots = PolynomeGenerator.IntegerRoots("x", roots);
+            tasks += i + 1 + ") \\mbox{ }" + "P(x) = " + polynomeByRoots.toString() + ", a = " + roots.get(0) + "\\\\";            
+        }
+        String formula = "$$" + tasks + "$$";
+        ArrayList<TeXFormula> formulas = new ArrayList<>();
+        TeXFormula header1 = new TeXFormula("\\mbox{\\bf{\\large{Зная, что число $a$ - корень многочлена $P(x)$,}}}");
+        TeXFormula header2 = new TeXFormula("\\mbox{\\bf{\\large{найти его остальные корни}}}");
+        header1.textStyle = "center";
+        header2.textStyle = "center";
+        formulas.add(header1);
+        formulas.add(header2);
+        formulas.add(new TeXFormula(formula));
+        try {
+            //TeXConverter.toSVG(formula, "math.svg", false);
+            TeXConverter.toSVGComplexFormula(formulas, "math.svg", false);
+            TeXConverter.SVGTo("math.svg", "Зная один корень многочлена найти остальные.pdf", TeXConverter.PDF);
+        } catch (IOException ex) {
+            Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_PolynomeWithOneKnownRootTaskButtonMouseClicked
+
+    private void GornerTaskButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GornerTaskButtonMouseClicked
+        Random rnd = new Random();                        
+        Polynome gornerPolynome;        
+        Polynome randomPolynome;
+        String tasks = "";
+        for (int i = 0; i < (int)PolynomeTasksInDocumentNumberSpinner.getValue(); i++){
+            int root = Util.Rndm.showRandomInteger(- (int)polynomeRootsRangeSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(), rnd, false);
+            randomPolynome = PolynomeGenerator.randomPolynome("x", (int)polynomeRootsNumberSpinner.getValue() - 1, (int)polynomeRootsRangeSpinner.getValue(), false);
+            gornerPolynome = Polynome.Multiply(PolynomeGenerator.BasicBinome("x", root), randomPolynome);
+            gornerPolynome = Polynome.Canonize(gornerPolynome);
+            tasks += i + 1 + ") \\mbox{ }" + "P(x) = " + gornerPolynome.toString() + ", Q(x) = " + PolynomeGenerator.BasicBinome("x", root).toString() + "\\\\";
+        }
+        String formula = "$$" + tasks + "$$";
+        ArrayList<TeXFormula> formulas = new ArrayList<>();
+        TeXFormula header1 = new TeXFormula("\\mbox{\\bf{\\Large{Разделить многочлен $P(x)$ на многочлем $Q(x)$}}}");        
+        TeXFormula header2 = new TeXFormula("\\mbox{\\bf{\\Large{Выписать получившийся многочлен}}}");        
+        header1.textStyle = "center";        
+        header2.textStyle = "center";        
+        formulas.add(header1);        
+        formulas.add(header2);        
+        formulas.add(new TeXFormula(formula));
+        try {            
+            TeXConverter.toSVGComplexFormula(formulas, "math.svg", false);
+            TeXConverter.SVGTo("math.svg", "Схема Горнера.pdf", TeXConverter.PDF);
+        } catch (IOException ex) {
+            Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_GornerTaskButtonMouseClicked
    
     /**
      * @param args the command line arguments
@@ -1585,6 +1669,7 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JButton FullSquareTaskGenerateButton;
     private javax.swing.JButton FullSquareTaskPDFButton;
     private javax.swing.JButton GeneratePolynomeByGivenRootsButton;
+    private javax.swing.JButton GornerTaskButton;
     private javax.swing.JButton MeasurementUnitsTaskGenerteDocumetButton;
     private javax.swing.JLabel NegativePdfNumberOfStringsLabel4;
     private javax.swing.JSpinner NegativePdfNumberOfStringsSpinner;
@@ -1601,6 +1686,7 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JLabel PolynomeTasksInDocumentNumberLabel;
     private javax.swing.JSpinner PolynomeTasksInDocumentNumberSpinner;
     private javax.swing.JTextField PolynomeTextField;
+    private javax.swing.JButton PolynomeWithOneKnownRootTaskButton;
     private javax.swing.JButton QuadraticEquasionGeneratePDFButton;
     private javax.swing.JButton RootSimplifyingTaskGenerateButton;
     private javax.swing.JLabel RootsListLabel;
