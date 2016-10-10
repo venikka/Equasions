@@ -18,6 +18,12 @@ import java.util.Random;
 public class Polynome extends PolynomeMember{    
     ArrayList<PolynomeMember> members;
     
+    public static Polynome negativeOne (){
+        Polynome result = new Polynome();
+        result.members.add(new PolynomeMember(new MathFunction(), 0, -1));
+        return result;
+    }
+    
     public Polynome(){        
         super("",1,1);
         //PolynomeMember blankMember = new PolynomeMember(new PowerFunction("x"), 0, 0);
@@ -178,7 +184,13 @@ public class Polynome extends PolynomeMember{
     public static Polynome Canonize (Polynome initialPolynime){
         return Polynome.SortMembersByPower(Polynome.GroupLikeTerms(initialPolynime));        
     }    
-    
+    public int Evaluate (int var){
+        int result = 0;
+        for (PolynomeMember member : members){
+            result += member.coeff * Math.pow(var, member.func.power);
+        }
+        return result;
+    }
     //TODO implement "equals" method
     //@Override
     //public boolean Equals(MathFunction)
