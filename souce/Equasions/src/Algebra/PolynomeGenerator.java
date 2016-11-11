@@ -31,14 +31,21 @@ public class PolynomeGenerator {
         basicBinome.members.add(new PolynomeMember(new MathFunction(), 0, -root));            
         return basicBinome;
     }
-    public static Polynome randomPolynome(String var, int power, int coeffRange, boolean monic){
+    public static Polynome randomPolynome(String var, int power, int coeffRange, boolean monic, boolean positiveLeadingCoeff){
         Polynome randomPolynome = new Polynome();
         Random rnd = new Random();
         for (int i = power; i > 0; i--){
-            if (monic && i == power){
-                randomPolynome.addMember(new PolynomeMember(var, i, 1));
+            if (i == power){
+                if (monic){
+                    randomPolynome.addMember(new PolynomeMember(var, i, 1));
+                }else if (positiveLeadingCoeff){
+                    randomPolynome.addMember(new PolynomeMember(var, i, Util.Rndm.showRandomInteger(1, coeffRange, rnd, false)));
+                }else{
+                    randomPolynome.addMember(new PolynomeMember(var, i, Util.Rndm.showRandomInteger(-coeffRange, coeffRange, rnd, false)));
+                }                    
             }else{
-                randomPolynome.addMember(new PolynomeMember(var, i, Util.Rndm.showRandomInteger(-coeffRange, coeffRange, rnd, false)));
+                if (positiveLeadingCoeff)
+                    randomPolynome.addMember(new PolynomeMember(var, i, Util.Rndm.showRandomInteger(-coeffRange, coeffRange, rnd, false)));
             }
         }
         randomPolynome.addMember(new MathFunction(), 0, Util.Rndm.showRandomInteger(-coeffRange, coeffRange, rnd, false));        

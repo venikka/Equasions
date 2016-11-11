@@ -77,6 +77,8 @@ public class EqGui extends javax.swing.JFrame {
         varNameTextField = new javax.swing.JTextField();
         varNameLabel = new javax.swing.JLabel();
         ShowLinearEquasionAnswerCheckBox = new javax.swing.JCheckBox();
+        primitiveEquasionButton = new javax.swing.JButton();
+        primitiveEquasionsDocumentButton = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
         jSeparator5 = new javax.swing.JSeparator();
         pdfEquasionSystemsButton = new javax.swing.JButton();
@@ -95,6 +97,8 @@ public class EqGui extends javax.swing.JFrame {
         longDivisionTaskDocumentButton = new javax.swing.JButton();
         NumberOfDigitsInDividedLabel = new javax.swing.JLabel();
         NumberOfDigitsInDividedSpinner = new javax.swing.JSpinner();
+        NumberOfDigitsInDivisorLabel = new javax.swing.JLabel();
+        NumberOfDigitsInDivisorSpinner = new javax.swing.JSpinner();
         jPanel8 = new javax.swing.JPanel();
         memberVariableTextField = new javax.swing.JTextField();
         memberCoeffTextField = new javax.swing.JTextField();
@@ -246,6 +250,20 @@ public class EqGui extends javax.swing.JFrame {
 
         ShowLinearEquasionAnswerCheckBox.setText("Показать ответ");
 
+        primitiveEquasionButton.setText("Примитивное уравнение");
+        primitiveEquasionButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                primitiveEquasionButtonMouseClicked(evt);
+            }
+        });
+
+        primitiveEquasionsDocumentButton.setText("Документ с примитивными уравнениями");
+        primitiveEquasionsDocumentButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                primitiveEquasionsDocumentButtonMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -291,7 +309,12 @@ public class EqGui extends javax.swing.JFrame {
                                     .addComponent(numberOfBracketsSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(generateTreeButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(412, Short.MAX_VALUE))
-                    .addComponent(equasionTextField)))
+                    .addComponent(equasionTextField)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(primitiveEquasionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(primitiveEquasionsDocumentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,7 +353,11 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(numberOfMembersLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(generateTreeButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(primitiveEquasionButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(primitiveEquasionsDocumentButton)
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Сгенерировать уравнение", jPanel1);
@@ -395,6 +422,8 @@ public class EqGui extends javax.swing.JFrame {
 
         NumberOfDigitsInDividedSpinner.setValue(3);
 
+        NumberOfDigitsInDivisorLabel.setText("Количество знаков в делителе");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -416,8 +445,10 @@ public class EqGui extends javax.swing.JFrame {
                         .addComponent(numbersRangeInDeniminatorTasksLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(NumberOfDigitsInDividedSpinner)
-                            .addComponent(numbersRangeInDeniminatorTasksSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))))
+                            .addComponent(NumberOfDigitsInDivisorSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(NumberOfDigitsInDividedSpinner)
+                                .addComponent(numbersRangeInDeniminatorTasksSpinner, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)))))
                 .addGap(450, 450, 450))
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addComponent(pdfEquasionSystemsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -435,7 +466,9 @@ public class EqGui extends javax.swing.JFrame {
                     .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(NumberOfDigitsInDividedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(NumberOfDigitsInDividedLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 164, Short.MAX_VALUE)
+                    .addComponent(NumberOfDigitsInDivisorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
@@ -471,12 +504,17 @@ public class EqGui extends javax.swing.JFrame {
                 .addGap(34, 34, 34)
                 .addComponent(RootSimplifyingTaskGenerateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(longDivisionTaskDocumentButton, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(NumberOfDigitsInDividedLabel)
-                        .addComponent(NumberOfDigitsInDividedSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(507, Short.MAX_VALUE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NumberOfDigitsInDividedLabel)
+                            .addComponent(NumberOfDigitsInDividedSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(NumberOfDigitsInDivisorLabel)
+                            .addComponent(NumberOfDigitsInDivisorSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(510, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Другие задания", jPanel7);
@@ -1433,7 +1471,7 @@ public class EqGui extends javax.swing.JFrame {
     }//GEN-LAST:event_measurementUnitsGenerateTaskButtonMouseClicked
 
     private void PolynomeGenerateRandomButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PolynomeGenerateRandomButtonMouseClicked
-        Polynome randPolynome = PolynomeGenerator.randomPolynome("x", (int)polynomeRootsNumberSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false);
+        Polynome randPolynome = PolynomeGenerator.randomPolynome("x", (int)polynomeRootsNumberSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false, false);
         PolynomeTextField.setText(randPolynome.toString());
     }//GEN-LAST:event_PolynomeGenerateRandomButtonMouseClicked
 
@@ -1469,8 +1507,8 @@ public class EqGui extends javax.swing.JFrame {
     }//GEN-LAST:event_generateFactorsTextFieldMouseClicked
 
     private void multiplyPolynomesButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_multiplyPolynomesButtonMouseClicked
-        Polynome firstFactor = PolynomeGenerator.randomPolynome("x", (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false);
-        Polynome secondFactor = PolynomeGenerator.randomPolynome("x", (int)dividedPolynomePowerSpinner.getValue() - (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),true);
+        Polynome firstFactor = PolynomeGenerator.randomPolynome("x", (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false, false);
+        Polynome secondFactor = PolynomeGenerator.randomPolynome("x", (int)dividedPolynomePowerSpinner.getValue() - (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),true,false);
         Polynome combination = Polynome.Multiply(firstFactor, secondFactor);
         combination = Polynome.Canonize(combination);
         firstFactorTextField.setText(firstFactor.toString());
@@ -1494,8 +1532,8 @@ public class EqGui extends javax.swing.JFrame {
         Random rnd = new Random();
         String tasks = "";
         for (int i = 0; i < (int)PolynomeTasksInDocumentNumberSpinner.getValue(); i++){
-            firstFactor = PolynomeGenerator.randomPolynome("x", (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false);
-            secondFactor = PolynomeGenerator.randomPolynome("x", (int)dividedPolynomePowerSpinner.getValue() - (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),true);
+            firstFactor = PolynomeGenerator.randomPolynome("x", (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),false,false);
+            secondFactor = PolynomeGenerator.randomPolynome("x", (int)dividedPolynomePowerSpinner.getValue() - (int)divisorPolynomePowerSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(),true,false);
             combination = Polynome.Multiply(firstFactor, secondFactor);
             int rem = Util.Rndm.showRandomInteger(-(int)polynomeRootsRangeSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(), rnd, true);
             if (PolynomeTaskWithRemCheckbox.isEnabled()){
@@ -1550,7 +1588,7 @@ public class EqGui extends javax.swing.JFrame {
     private void longDivisionTaskDocumentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_longDivisionTaskDocumentButtonMouseClicked
         String tasks = "";
         for (int i = 0; i < (int)numberosEquasionSystemTasksInDocumentSpinner.getValue(); i++){
-           tasks += i + 1 + ") \\mbox{ }" + LongDivisionTask.generateLongDivisionTaskSingleDigitDivisor((int)NumberOfDigitsInDividedSpinner.getValue()) + "\\\\";           
+           tasks += i + 1 + ") \\mbox{ }" + LongDivisionTask.generateLongDivisionTaskSingleDigitDivisor((int)NumberOfDigitsInDividedSpinner.getValue(),(int)NumberOfDigitsInDivisorSpinner.getValue() ) + "\\\\";           
         }
         String formula = "$$" + tasks + "$$";
         ArrayList<TeXFormula> formulas = new ArrayList<>();
@@ -1607,7 +1645,7 @@ public class EqGui extends javax.swing.JFrame {
         String tasks = "";
         for (int i = 0; i < (int)PolynomeTasksInDocumentNumberSpinner.getValue(); i++){
             int root = Util.Rndm.showRandomInteger(- (int)polynomeRootsRangeSpinner.getValue(), (int)polynomeRootsRangeSpinner.getValue(), rnd, false);
-            randomPolynome = PolynomeGenerator.randomPolynome("x", (int)polynomeRootsNumberSpinner.getValue() - 1, (int)polynomeRootsRangeSpinner.getValue(), false);
+            randomPolynome = PolynomeGenerator.randomPolynome("x", (int)polynomeRootsNumberSpinner.getValue() - 1, (int)polynomeRootsRangeSpinner.getValue(), false,false);
             gornerPolynome = Polynome.Multiply(PolynomeGenerator.BasicBinome("x", root), randomPolynome);
             gornerPolynome = Polynome.Canonize(gornerPolynome);
             tasks += i + 1 + ") \\mbox{ }" + "P(x) = " + gornerPolynome.toString() + ", Q(x) = " + PolynomeGenerator.BasicBinome("x", root).toString() + "\\\\";
@@ -1628,6 +1666,44 @@ public class EqGui extends javax.swing.JFrame {
             Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_GornerTaskButtonMouseClicked
+
+    private void primitiveEquasionButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primitiveEquasionButtonMouseClicked
+        Random rnd = new Random();
+        int answer = Util.Rndm.showRandomInteger(1, (int)answerRangeSpinner.getValue(), rnd, false);
+        Polynome polynome = PolynomeGenerator.randomPolynome(varNameTextField.getText(), 1, (int)answerRangeSpinner.getValue(), false,true);
+        if (polynome.Evaluate(answer) < 0){            
+            polynome = Polynome.Multiply(polynome, Polynome.negativeOne());
+        }
+        String equasion = polynome.toString() + " = " + polynome.Evaluate(answer);
+        equasionTextField.setText(equasion + " answer " + answer);
+    }//GEN-LAST:event_primitiveEquasionButtonMouseClicked
+
+    private void primitiveEquasionsDocumentButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_primitiveEquasionsDocumentButtonMouseClicked
+        String tasks = "";
+        Random rnd = new Random();
+        for (int i = 0; i < (int)numberOfEquasionsInFileSpinner.getValue(); i++){
+            int answer = Util.Rndm.showRandomInteger(1, (int)answerRangeSpinner.getValue(), rnd, false);
+            Polynome polynome = PolynomeGenerator.randomPolynome(varNameTextField.getText(), 1, (int)answerRangeSpinner.getValue(), false, true);
+            if (polynome.Evaluate(answer) < 0){            
+                polynome = Polynome.Multiply(polynome, Polynome.negativeOne());
+            }
+            String equasion = polynome.toString() + " = " + polynome.Evaluate(answer);
+            tasks += i + 1 + ") \\mbox{ }" + equasion + "\\\\";           
+        }
+        String formula = "$$" + tasks + "$$";
+        ArrayList<TeXFormula> formulas = new ArrayList<>();
+        TeXFormula header1 = new TeXFormula("\\mbox{\\bf{\\Huge{Решить уравнения}}}");        
+        header1.textStyle = "center";
+        formulas.add(header1);
+        formulas.add(new TeXFormula(formula));
+        try {
+            //TeXConverter.toSVG(formula, "math.svg", false);
+            TeXConverter.toSVGComplexFormula(formulas, "math.svg", false);
+            TeXConverter.SVGTo("math.svg", "Простые линейные уравнения.pdf", TeXConverter.PDF);
+        } catch (IOException ex) {
+            Logger.getLogger(EqGui.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_primitiveEquasionsDocumentButtonMouseClicked
    
     /**
      * @param args the command line arguments
@@ -1677,6 +1753,8 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JTextField NegativeTextField;
     private javax.swing.JLabel NumberOfDigitsInDividedLabel;
     private javax.swing.JSpinner NumberOfDigitsInDividedSpinner;
+    private javax.swing.JLabel NumberOfDigitsInDivisorLabel;
+    private javax.swing.JSpinner NumberOfDigitsInDivisorSpinner;
     private javax.swing.JButton PDFGenerateDenominatorButton;
     private javax.swing.JButton PolynomeDivisionTaskDocument;
     private javax.swing.JButton PolynomeGenerateRandomButton;
@@ -1764,6 +1842,8 @@ public class EqGui extends javax.swing.JFrame {
     private javax.swing.JSpinner polynomeRootsRangeSpinner;
     private javax.swing.JList polynomeRootsjList;
     private javax.swing.JTextField polynomeStringTextField;
+    private javax.swing.JButton primitiveEquasionButton;
+    private javax.swing.JButton primitiveEquasionsDocumentButton;
     private javax.swing.JButton quadraticEquasionGenerateButton;
     private javax.swing.JSpinner quadraticTrinomialNumberOfExersisesSpinner;
     private javax.swing.JLabel quadraticTrinomialNumberOfTasksLabel;

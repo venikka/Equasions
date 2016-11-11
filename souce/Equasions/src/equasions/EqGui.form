@@ -82,7 +82,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
+                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="generateEquasionButton" max="32767" attributes="0"/>
@@ -137,6 +137,13 @@
                               <EmptySpace pref="412" max="32767" attributes="0"/>
                           </Group>
                           <Component id="equasionTextField" alignment="0" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="primitiveEquasionButton" max="32767" attributes="0"/>
+                                  <Component id="primitiveEquasionsDocumentButton" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -184,7 +191,11 @@
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="generateTreeButton1" min="-2" pref="39" max="-2" attributes="0"/>
-                      <EmptySpace pref="333" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="primitiveEquasionButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="primitiveEquasionsDocumentButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="277" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -318,6 +329,22 @@
                 <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x44c; &#x43e;&#x442;&#x432;&#x435;&#x442;"/>
               </Properties>
             </Component>
+            <Component class="javax.swing.JButton" name="primitiveEquasionButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x438;&#x43c;&#x438;&#x442;&#x438;&#x432;&#x43d;&#x43e;&#x435; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x435;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primitiveEquasionButtonMouseClicked"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="primitiveEquasionsDocumentButton">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43a;&#x443;&#x43c;&#x435;&#x43d;&#x442; &#x441; &#x43f;&#x440;&#x438;&#x43c;&#x438;&#x442;&#x438;&#x432;&#x43d;&#x44b;&#x43c;&#x438; &#x443;&#x440;&#x430;&#x432;&#x43d;&#x435;&#x43d;&#x438;&#x44f;&#x43c;&#x438;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="primitiveEquasionsDocumentButtonMouseClicked"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel7">
@@ -352,8 +379,11 @@
                               <Component id="numbersRangeInDeniminatorTasksLabel" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="NumberOfDigitsInDividedSpinner" max="32767" attributes="0"/>
-                                  <Component id="numbersRangeInDeniminatorTasksSpinner" pref="47" max="32767" attributes="0"/>
+                                  <Component id="NumberOfDigitsInDivisorSpinner" pref="47" max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="NumberOfDigitsInDividedSpinner" max="32767" attributes="0"/>
+                                      <Component id="numbersRangeInDeniminatorTasksSpinner" pref="47" max="32767" attributes="0"/>
+                                  </Group>
                               </Group>
                           </Group>
                       </Group>
@@ -379,7 +409,10 @@
                           <Component id="RootSimplifyingTaskGenerateButton" pref="369" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="NumberOfDigitsInDividedLabel" min="-2" pref="164" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="NumberOfDigitsInDividedLabel" pref="164" max="32767" attributes="0"/>
+                          <Component id="NumberOfDigitsInDivisorLabel" max="32767" attributes="0"/>
+                      </Group>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -426,14 +459,21 @@
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Component id="RootSimplifyingTaskGenerateButton" min="-2" pref="44" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="longDivisionTaskDocumentButton" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="NumberOfDigitsInDividedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="NumberOfDigitsInDividedSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="NumberOfDigitsInDividedLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NumberOfDigitsInDividedSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="NumberOfDigitsInDivisorLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="NumberOfDigitsInDivisorSpinner" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
-                      <EmptySpace pref="507" max="32767" attributes="0"/>
+                      <EmptySpace pref="510" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -550,6 +590,13 @@
                   <Connection code="3" type="code"/>
                 </Property>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="NumberOfDigitsInDivisorLabel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x437;&#x43d;&#x430;&#x43a;&#x43e;&#x432; &#x432; &#x434;&#x435;&#x43b;&#x438;&#x442;&#x435;&#x43b;&#x435;"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSpinner" name="NumberOfDigitsInDivisorSpinner">
             </Component>
           </SubComponents>
         </Container>

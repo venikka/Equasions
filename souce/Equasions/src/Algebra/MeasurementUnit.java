@@ -128,9 +128,9 @@ public class MeasurementUnit{
         meters(1000, "м.", MeasurementUnitTypes.length),
         kilometers(1000000, "км.", MeasurementUnitTypes.length),        
         //time
-        seconds (1, "сек.", MeasurementUnitTypes.time),
-        minutes (60, "мин.", MeasurementUnitTypes.time),
-        hours (3600, "ч.", MeasurementUnitTypes.time),
+        //seconds (1, "сек.", MeasurementUnitTypes.time),
+        //minutes (60, "мин.", MeasurementUnitTypes.time),
+        //hours (3600, "ч.", MeasurementUnitTypes.time),
         //days (86400, "сут.", MeasurementUnitTypes.time),                
         ;
         private final int inMinimalUnits;
@@ -158,7 +158,8 @@ public class MeasurementUnit{
         mass (200000000),
         length (100000000),
         //area,
-        time (360000);
+        //time (360000)
+        ;
         private final int maxValueInMinimalUnits;
 
         private MeasurementUnitTypes(int maxinMinUnits) {
